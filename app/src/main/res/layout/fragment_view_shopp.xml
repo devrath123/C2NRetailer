@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".viewshopdetails.presenter.ViewShoppFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.example.c2n.viewshopdetails.presenter.ViewShopActivity">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/shopImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/white_background"
+                        android:scaleType="centerCrop" />
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#000" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSelectImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pencil" />
+
+
+                    <TextView
+                        android:id="@+id/tv_no_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="No Image"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:padding="4dp"
+                            android:text="Shop Name"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/tv_shop_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Shop Name"
+                            android:paddingLeft="4dp"
+                            android:textColor="#000"
+                            android:textSize="18dp" />
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:text="Address"-->
+                        <!--android:textSize="14dp" />-->
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/tv_shop_address"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:drawableRight="@drawable/map_marker"-->
+                        <!--android:editable="false"-->
+                        <!--android:focusableInTouchMode="false"-->
+                        <!--android:hint="Address"-->
+                        <!--android:paddingLeft="4dp"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="18dp" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:padding="4dp"-->
+                        <!--android:text="Shop No./ Landmark"-->
+                        <!--android:textSize="14dp" />-->
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/tv_shop_landmark"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="Shop No./ Landmark"-->
+                        <!--android:paddingLeft="4dp"-->
+                        <!--android:textColor="#000"-->
+                        <!--android:textSize="18dp" />-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:text="Mobile Number"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/tv_shop_mobile_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile Number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingLeft="4dp"
+                            android:textColor="#000"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:text="Email"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/tv_shop_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="4dp"
+                            android:textColor="#000"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/backgroundColor" />
+
+                    <TextView
+                        android:id="@+id/bt_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/map_marker"
+                        android:gravity="center_horizontal"
+                        android:padding="8dp"
+                        android:text="Address"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/et_shop_addresss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="56dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginTop="4dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:lines="8"
+                        android:minLines="3"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@android:color/black"
+                        android:textSize="17dip" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/bt_save_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimary"
+            android:text="Save Details"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</FrameLayout>

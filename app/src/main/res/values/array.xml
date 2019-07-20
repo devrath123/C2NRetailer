@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genderspinner">
+        <item>Not Specified</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="array_navigation">
+        <item>Categoriess</item>
+        <item>Popular Shops</item>
+        <item>Popular Products</item>
+        <item>My Orders</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="array_navigation_retailer">
+        <item>All Shops</item>
+        <item>Add Shop</item>
+        <item>Profile</item>
+        <item>Logout</item>
+    </string-array>
+</resources>

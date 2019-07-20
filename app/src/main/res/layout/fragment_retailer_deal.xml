@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.c2n.retailer_deal.presenter.RetailerDealFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor" />
+
+    <LinearLayout
+        android:id="@+id/no_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="56dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_filter"
+            android:src="@drawable/empty_cart" />
+
+        <TextView
+            android:id="@+id/no_product_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:text="No Proposed Deals Found"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

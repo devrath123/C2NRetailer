@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       <Button
+           android:id="@+id/bt_apply_discount_offer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="25dp"
+           android:background="@color/themecolor"
+           android:textStyle="bold"
+           android:text="Apply Discount"
+           android:textSize="24sp"
+           android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/tv_or_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="or"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_apply_buy_get_scheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@color/themecolor"
+            android:textStyle="bold"
+            android:text="Buy  _  Get  _  Scheme"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

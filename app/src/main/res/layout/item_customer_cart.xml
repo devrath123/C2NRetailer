@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="4dp">
+
+    <!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginTop="8dp">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cart_shop_image"-->
+    <!--android:layout_width="80dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/kitchenware" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cart_shop_name"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="56dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:text="samsung store"-->
+    <!--android:textColor="#609"-->
+    <!--android:textSize="17dp"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/cart_shop_image"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cart_shop_bill"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="32dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:text="Total Bill : 450"-->
+    <!--android:textColor="@color/grey"-->
+    <!--android:textSize="14dp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/cart_shop_image"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/cart_shop_name" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cart_shop_distance"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:text="Distance From You:20 km"-->
+    <!--android:textColor="@color/grey"-->
+    <!--android:textSize="14dp"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/cart_shop_image"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/cart_shop_bill" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/cart_your_products_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="Your Products"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/cart_shop_image" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/cart_arrow_down"-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_marginEnd="32dp"-->
+    <!--android:layout_marginLeft="32dp"-->
+    <!--android:layout_marginRight="32dp"-->
+    <!--android:layout_marginStart="32dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/arrow_down_icon"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="1.0"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/cart_your_products_title"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/cart_shop_distance" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cart_remove_shop"-->
+    <!--android:layout_width="20dp"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="32dp"-->
+    <!--android:layout_marginRight="32dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:visibility="visible"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/cart_arrow_down"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintVertical_bias="0.0"-->
+    <!--app:srcCompat="@drawable/remove" />-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp">
+
+                <ImageView
+                    android:id="@+id/cart_shop_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cart_shop_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="samsung store"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/cart_shop_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="Distance From You:20 km"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/cart_shop_bill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:text="450"
+                        android:textColor="@color/red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cart_remove_shop"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="12dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/remove" />
+
+            <ImageView
+                android:id="@+id/imageview_map"
+                android:src="@drawable/google_maps"
+                android:layout_width="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:layout_height="24dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/cart_your_products_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Your Products"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/cart_arrow_down"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/arrow_down_icon" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

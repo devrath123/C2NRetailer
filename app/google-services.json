@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "898094839716",
+    "firebase_url": "https://c2napp.firebaseio.com",
+    "project_id": "c2napp",
+    "storage_bucket": "c2napp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898094839716:android:855bcf0c4d8e780e",
+        "android_client_info": {
+          "package_name": "com.example.c2n"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "898094839716-p9f5g0r4idtrsks8bkjif4vgdpsc3mr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaGEG_Fb7qJf4WNj-ld5W8rYQt1nZbcwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "898094839716-p9f5g0r4idtrsks8bkjif4vgdpsc3mr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

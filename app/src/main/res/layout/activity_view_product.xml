@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.c2n.view_product.presenter.ViewProductActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp">
+
+                    <!--<android.support.v7.widget.CardView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--app:cardCornerRadius="20dp"-->
+                    <!--app:cardElevation="10dp"-->
+                    <!--app:cardPreventCornerOverlap="false">-->
+
+                    <ImageView
+                        android:id="@+id/iv_view_product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                    <!--</android.support.v7.widget.CardView>-->
+
+                    <View
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#000"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_edit_product_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pencil"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_editproduct_applied_offercard"
+                    android:layout_width="200dp"
+                    android:layout_height="105dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="170dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_editproduct_offercardname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Offer Name"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_editproduct_active_offercard_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_offercard_discount_perc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@android:color/black"
+                                android:textSize="40sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_discount_perc_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="%"
+                                android:textColor="@android:color/black"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_discount_off_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" OFF"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_offercard_startdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="21/01/18"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_offer_date_to_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="  to  "
+                                android:textColor="@android:color/black"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_offercard_enddate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="28/09/18"
+                                android:textColor="@android:color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dp"-->
+                            <!--android:text="(" />-->
+
+                            <TextView
+                                android:id="@+id/tv_editproduct_offercard_applicable_days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Mon"
+                                android:textSize="11sp" />
+
+                            <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text=")" />-->
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Product Name"
+                    android:textSize="12sp" />
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/border_untouch">-->
+
+                <TextView
+                    android:id="@+id/et_edit_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:editable="false"
+                    android:paddingLeft="8dp"
+                    android:text="Product Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+                <!--</FrameLayout>-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="M.R.P"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_product_mrp_price"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/ic_rupees_mrp"
+                            android:inputType="number"
+                            android:padding="5dp"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold">
+
+                            <!--<TextView-->
+                            <!---->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_vertical"-->
+                            <!--android:text="Rs. 2326"-->
+                            <!--/>-->
+                        </EditText>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_discounted_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Discounted Price"
+                            android:textSize="12sp" />
+
+                        <!--<FrameLayout-->
+                        <!--android:layout_width="120dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@drawable/border_untouch"-->
+                        <!--android:padding="5dp">-->
+
+                        <TextView
+                            android:id="@+id/et_discounted_product_price"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/ic_rupees_mrp"
+                            android:padding="5dp"
+                            android:text="2116"
+                            android:textColor="@android:color/black"
+                            android:textSize="21sp"
+                            android:textStyle="bold" />
+                        <!--</FrameLayout>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Offer"
+                        android:textSize="12sp" />
+
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="120dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="@drawable/border_untouch"-->
+                    <!--android:padding="5dp">-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_editproduct_offer_apply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:padding="4dp"
+                            android:text="Apply"
+                            android:textColor="@color/offerColor"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <!--</FrameLayout>-->
+                        <TextView
+                            android:id="@+id/tv_remove_offercard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:text="Remove"
+                            android:textColor="@color/offerColor"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_remove_product_offer"-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginLeft="235dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:src="@drawable/remove_button"-->
+                <!--android:visibility="invisible" />-->
+
+
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/card_edit_product_offer"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:minWidth="100dp"-->
+
+                <!--app:cardBackgroundColor="@android:color/holo_red_dark"-->
+                <!--app:cardCornerRadius="10dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_edit_offer"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Add Offer"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="19sp"-->
+                <!--android:textStyle="bold" />-->
+                <!--</android.support.v7.widget.CardView>-->
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Description"
+                    android:textSize="12sp" />
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="90dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="@drawable/border_untouch">-->
+
+                <TextView
+                    android:id="@+id/et_product_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+                <!--</FrameLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_save_product_details"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="12dp"
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

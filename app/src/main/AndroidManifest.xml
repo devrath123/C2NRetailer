@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.c2n">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+
+    <application
+        android:name=".core.checkconnection.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".core.checkconnection.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.schibstedspain.leku.LocationPickerActivity"
+            android:label="@string/leku_title_activity_location_picker"
+            android:parentActivityName=".initial_phase.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LocationTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/leku_searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".initial_phase.MainActivity" />
+        </activity>
+        <!-- <activity android:name=".login.presenter.LoginActivity"> -->
+        <activity
+            android:name=".login.presenter.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".initial_phase.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mobileverification.presentation.presenter.MobileVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signup.presenter.SignUpActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".preferences.presenter.PreferencesActivity"
+            android:label="Select your Preferences"
+            android:screenOrientation="portrait" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCeGNexl9P4dVBj0T5CbgPRcaZDbHSI2MU" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".addshop.presenter.AddShopActivity"
+            android:screenOrientation="portrait" />
+        <!-- <activity -->
+        <!-- android:name=".customer_products_list.presenter.ProductsListFragment" -->
+        <!-- android:theme="@style/Theme.Design.Light.NoActionBar" /> -->
+        <activity
+            android:name=".cart.CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".viewshopdetails.presenter.ViewShopActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".newlayoutdesMainActivityvity" -->
+        <!-- android:theme="@style/Theme.Design.Light.NoActionBar" -->
+        <!-- android:windowSoftInputMode="adjustResize"></activity> -->
+        <!-- <activity android:name=".newlayoutdesMainActivityvity" /> -->
+        <activity
+            android:name=".signUp1.presenter.SignUpOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".signUp1.presenter.SignUpDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".retailerhome.presenter.RetailerHomeActivity"
+            android:label="@string/title_activity_retailer_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".add_product.presenter.AddProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar.Transparent" />
+        <activity android:name=".retailer_shop_products_list.presenter.RetailerShopProductsActivity">
+
+            <!-- android:theme="@style/AppTheme.ActionBar.Transparent"> -->
+
+
+            <!-- android:theme="@style/AppTheme.NoActionBar"> -->
+
+
+            <!-- <meta-CustomerSingleProductRepository -->
+            <!-- android:name="android.app.searchable" -->
+            <!-- android:resource="@xml/searchable" /> -->
+
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.SEARCH" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".retailercategory.presenter.RetailerCategoryActivity" />
+        <!-- <activity android:name=".addshop.presenter.AddShopActivity"></activity> -->
+        <activity android:name=".view_product.presenter.ViewProductActivity" />
+        <activity android:name=".edit_product_offer.presenter.UpdateProductOfferActivity" />
+        <activity android:name=".offer_cards_list.presenter.OffersListActivity" />
+        <activity android:name=".make_offer_card.presenter.MakeOfferCardActivity" />
+        <!-- <activity android:name=".view_product.presenter.ViewProductActivity" /> -->
+        <activity android:name=".retailer_offer_products.presenter.presenter.presenter.OfferProductsActivity" />
+        <activity
+            android:name=".customer_home.presenter.CustomerHomeActivity"
+            android:label="@string/title_activity_customer_home"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".customer_single_shop_products.presenter.CustomerSingleShopProductsActivity" />
+        <activity android:name=".customer_cart.presenter.CustomerCartActivity" />
+        <activity android:name=".customer_offer_cards.presenter.CustomerSingleOfferProducts" />
+        <activity android:name=".master_list.presenter.MasterListActivity" />
+        <activity android:name=".addproduct.presenter.AddProductActivity" />
+        <activity android:name=".customer_single_product.presenter.CustomerSingleProductActivity" />
+        <!-- FCM: Disable auto-init -->
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <service
+            android:name=".core.MyFirebaseMessagingService"
+            android:permission="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--<activity-->
+            <!--android:name=".SplashActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/Theme.Design.Light.NoActionBar"-->
+            <!--android:windowSoftInputMode="adjustResize">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest>
