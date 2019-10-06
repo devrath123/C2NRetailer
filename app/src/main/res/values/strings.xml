@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">C2N</string>
+    <string name="app_name">C2NRetailer</string>
     <string name="please_enter_your_mobile_number">Please enter your mobile number</string>
     <string name="enter_mobile_number">Enter mobile number</string>
     <string name="enter_otp">Enter OTP</string>
