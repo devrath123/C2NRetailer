@@ -65,8 +65,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Email"
-                        android:text="dev.rathee2010@gmail.com"
                         android:inputType="textEmailAddress" />
+
+                    <!--android:text="dev.rathee2010@gmail.com"-->
                 </android.support.design.widget.TextInputLayout>
 
                 <ProgressBar
@@ -102,8 +103,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
-                    android:text="Nihilent@123"
                     android:inputType="textPassword" />
+                    <!--android:text="Nihilent@123"-->
+
             </android.support.design.widget.TextInputLayout>
 
 
